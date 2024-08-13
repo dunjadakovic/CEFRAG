@@ -46,7 +46,7 @@ retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k
 
 topic = input()
 level = input()
-retrieved_docs = retriever.invoke("What are" + topic + "for" + level)
+
 
 print(retrieved_docs)
 
@@ -75,4 +75,4 @@ rag_chain = (
     | StrOutputParser()
 )
 
-rag_chain.invoke("A2, Calendar")
+rag_chain.invoke(level, topic)
