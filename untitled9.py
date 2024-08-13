@@ -19,7 +19,7 @@ llm = ChatOpenAI(model="gpt-3.5-turbo")
 
 from langchain_community.document_loaders.csv_loader import CSVLoader
 
-file_path = "ContentAndCategories.csv"
+file_path = "https://github.com/dunjadakovic/CEFRAG/blob/df44d2cbc6636cd8c972d8c34198695a61b00179/ContentAndCategories.csv"
 
 loader = CSVLoader(file_path=file_path)
 data = loader.load()
