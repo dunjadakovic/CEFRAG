@@ -51,7 +51,9 @@ vectorstore = Chroma.from_documents(documents=texts, embedding=OpenAIEmbeddings(
 
 retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 1})
 
-retrieved_docs = retriever.invoke("What are family(young) for A1?")
+topic = input()
+level = input()
+retrieved_docs = retriever.invoke("What are" + topic + "for" + level)
 
 print(retrieved_docs)
 
